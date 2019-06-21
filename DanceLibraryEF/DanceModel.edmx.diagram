@@ -6,11 +6,11 @@
     <edmx:Diagrams>
       <Diagram DiagramId="7ae08ca2e6ab47ce9ec448ec053e0b85" Name="Diagram1">
         <EntityTypeShape EntityType="DanceSportSimplifiedModel.CLASS" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DanceSportSimplifiedModel.CLUB" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DanceSportSimplifiedModel.COMPETITION" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DanceSportSimplifiedModel.CLUB" Width="1.5" PointX="0.625" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DanceSportSimplifiedModel.COMPETITION" Width="1.5" PointX="5" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DanceSportSimplifiedModel.DANCER" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DanceSportSimplifiedModel.SEX" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DanceSportSimplifiedModel.sysdiagram" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DanceSportSimplifiedModel.SEX" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DanceSportSimplifiedModel.sysdiagram" Width="1.5" PointX="8.625" PointY="4.375" IsExpanded="true" />
         <AssociationConnector Association="DanceSportSimplifiedModel.FK_DANCER_CLASS_LAT" ManuallyRouted="false" />
         <AssociationConnector Association="DanceSportSimplifiedModel.FK_DANCER_CLASS_ST" ManuallyRouted="false" />
         <AssociationConnector Association="DanceSportSimplifiedModel.FK_DANCER_CLUB" ManuallyRouted="false" />
