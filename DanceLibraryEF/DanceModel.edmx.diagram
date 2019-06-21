@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7ae08ca2e6ab47ce9ec448ec053e0b85" Name="Diagram1">
+        <EntityTypeShape EntityType="DanceSportSimplifiedModel.CLASS" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DanceSportSimplifiedModel.CLUB" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DanceSportSimplifiedModel.COMPETITION" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DanceSportSimplifiedModel.DANCER" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DanceSportSimplifiedModel.SEX" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DanceSportSimplifiedModel.sysdiagram" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="DanceSportSimplifiedModel.FK_DANCER_CLASS_LAT" ManuallyRouted="false" />
+        <AssociationConnector Association="DanceSportSimplifiedModel.FK_DANCER_CLASS_ST" ManuallyRouted="false" />
+        <AssociationConnector Association="DanceSportSimplifiedModel.FK_DANCER_CLUB" ManuallyRouted="false" />
+        <AssociationConnector Association="DanceSportSimplifiedModel.FK_DANCER_SEX" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
