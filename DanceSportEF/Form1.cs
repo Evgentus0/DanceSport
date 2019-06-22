@@ -52,7 +52,26 @@ namespace DanceSportEF
             {
                 dancers = dancers.Where(d => d.Height >= numericUpDownYearMin.Value && d.Height <= numericUpDownYearMax.Value);
             }
-            //if(!(checkBoxFemaleD.Checked || checkBoxMaleD.Checked))
+            if(checkBoxMaleD.Checked || checkBoxFemaleD.Checked)
+            {
+                if (checkBoxMaleD.Checked)
+                {
+                    dancers = dancers.Where(d => d.SEX1.Sex1 == "Ч");
+                }
+                else
+                {
+                    dancers = dancers.Where(d => d.SEX1.Sex1 == "Ж");
+                }
+            }
+            if(comboBoxMinClassLatD.SelectedValue!=null&& comboBoxMaxClassLatD.SelectedValue != null)
+            {
+                dancers = dancers.Where(d => d.Class_Lat >= comboBoxMinClassLatD.SelectedIndex && d.Class_Lat <= comboBoxMaxClassLatD.SelectedIndex);
+            }
+            if (comboBoxMinClassStD.SelectedValue != null && comboBoxMaxClassStD.SelectedValue != null)
+            {
+                dancers = dancers.Where(d => d.Class_Lat >= comboBoxMinClassStD.SelectedIndex && d.Class_Lat <= comboBoxMaxClassStD.SelectedIndex);
+            }
+
         }
     }
 }
