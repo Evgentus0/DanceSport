@@ -76,6 +76,7 @@ namespace DanceSportEF
                 dancers = dancers.Where(d => d.Class_Lat >= comboBoxMinClassStD.SelectedIndex && d.Class_Lat <= comboBoxMaxClassStD.SelectedIndex);
             }
             dancers.Load();
+            dANCERBindingSource.DataSource = ctx.DANCERs.Local.ToBindingList();
         }
     }
 }
