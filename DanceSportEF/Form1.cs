@@ -48,6 +48,11 @@ namespace DanceSportEF
             {
                 dancers = dancers.Where(d => d.Height >= numericUpDownHeightMin.Value && d.Height <= numericUpDownHeightMax.Value);
             }
+            if (numericUpDownYearMin.Value <= numericUpDownYearMax.Value)
+            {
+                dancers = dancers.Where(d => d.Height >= numericUpDownYearMin.Value && d.Height <= numericUpDownYearMax.Value);
+            }
+            //if(!(checkBoxFemaleD.Checked || checkBoxMaleD.Checked))
         }
     }
 }
