@@ -25,8 +25,12 @@ namespace DanceSportEF
             ctx = new DanceLibraryEF.DanceSportSimplifiedEntities();
             ctx.DANCERs.Load();
             ctx.SEXes.Load();
+            ctx.CLASSes.Load();
             this.dANCERBindingSource.DataSource = ctx.DANCERs.Local.ToBindingList();
+            this.cLUBBindingSource.DataSource = ctx.CLUBs.Local.ToBindingList();
+            this.cOMPETITIONBindingSource.DataSource = ctx.COMPETITIONs.Local.ToBindingList();
             this.sEXBindingSource.DataSource = ctx.SEXes.Local.ToBindingList();
+            this.cLASSBindingSource.DataSource = ctx.CLASSes.Local.ToBindingList();
             
         }
 

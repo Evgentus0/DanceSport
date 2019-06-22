@@ -74,6 +74,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DanceLibraryEF.CLASS.datasource" />
     <None Include="Properties\DataSources\DanceLibraryEF.CLUB.datasource" />
     <None Include="Properties\DataSources\DanceLibraryEF.COMPETITION.datasource" />
     <None Include="Properties\DataSources\DanceLibraryEF.DANCER.datasource" />
