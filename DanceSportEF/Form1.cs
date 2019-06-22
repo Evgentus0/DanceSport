@@ -43,6 +43,7 @@ namespace DanceSportEF
         private void ButtonSearchD_Click(object sender, EventArgs e)
         {
             ctx.Dispose();
+            ctx = new DanceLibraryEF.DanceSportSimplifiedEntities();
             var dancers = from d in ctx.DANCERs select d;
             if (!string.IsNullOrEmpty(textBoxNameD.Text))
             {
