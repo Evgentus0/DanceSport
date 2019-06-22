@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabPageCompetitions = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.buttonResetFilterC = new System.Windows.Forms.Button();
             this.buttonSearchC = new System.Windows.Forms.Button();
             this.label31 = new System.Windows.Forms.Label();
             this.comboBox25 = new System.Windows.Forms.ComboBox();
@@ -62,6 +64,7 @@
             this.Trainer_St = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tabPageClubs = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonResetFilterS = new System.Windows.Forms.Button();
             this.buttonSearchS = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -76,6 +79,7 @@
             this.tabPageD = new System.Windows.Forms.TabPage();
             this.ErrorLabelD = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonResetFilterD = new System.Windows.Forms.Button();
             this.buttonSearchD = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.comboBoxMaxClassStD = new System.Windows.Forms.ComboBox();
@@ -104,9 +108,29 @@
             this.dataGridViewD = new System.Windows.Forms.DataGridView();
             this.Клуб = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.buttonResetFilterD = new System.Windows.Forms.Button();
-            this.buttonResetFilterS = new System.Windows.Forms.Button();
-            this.buttonResetFilterC = new System.Windows.Forms.Button();
+            this.dANCERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLUBIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.heightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classLatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classStDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearofbirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLASSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLASS1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLUBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sEX1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLUBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dANCERsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cOMPETITIONBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adressDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageCompetitions.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewT)).BeginInit();
@@ -117,6 +141,9 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewD)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dANCERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cLUBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOMPETITIONBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPageCompetitions
@@ -126,10 +153,10 @@
             this.tabPageCompetitions.Controls.Add(this.buttonDeleteC);
             this.tabPageCompetitions.Controls.Add(this.buttonSaveC);
             this.tabPageCompetitions.Controls.Add(this.dataGridViewT);
-            this.tabPageCompetitions.Location = new System.Drawing.Point(4, 25);
-            this.tabPageCompetitions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageCompetitions.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCompetitions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageCompetitions.Name = "tabPageCompetitions";
-            this.tabPageCompetitions.Size = new System.Drawing.Size(920, 594);
+            this.tabPageCompetitions.Size = new System.Drawing.Size(688, 480);
             this.tabPageCompetitions.TabIndex = 3;
             this.tabPageCompetitions.Text = "Змагання";
             this.tabPageCompetitions.UseVisualStyleBackColor = true;
@@ -155,21 +182,31 @@
             this.groupBox4.Controls.Add(this.checkBox7);
             this.groupBox4.Controls.Add(this.checkBox8);
             this.groupBox4.Controls.Add(this.label40);
-            this.groupBox4.Location = new System.Drawing.Point(27, 18);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Location = new System.Drawing.Point(20, 15);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(613, 183);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(460, 149);
             this.groupBox4.TabIndex = 83;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Фільтр";
             // 
+            // buttonResetFilterC
+            // 
+            this.buttonResetFilterC.Location = new System.Drawing.Point(177, 109);
+            this.buttonResetFilterC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonResetFilterC.Name = "buttonResetFilterC";
+            this.buttonResetFilterC.Size = new System.Drawing.Size(116, 21);
+            this.buttonResetFilterC.TabIndex = 94;
+            this.buttonResetFilterC.Text = "Скинути фільтр";
+            this.buttonResetFilterC.UseVisualStyleBackColor = true;
+            // 
             // buttonSearchC
             // 
-            this.buttonSearchC.Location = new System.Drawing.Point(425, 134);
-            this.buttonSearchC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSearchC.Location = new System.Drawing.Point(319, 109);
+            this.buttonSearchC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSearchC.Name = "buttonSearchC";
-            this.buttonSearchC.Size = new System.Drawing.Size(155, 26);
+            this.buttonSearchC.Size = new System.Drawing.Size(116, 21);
             this.buttonSearchC.TabIndex = 85;
             this.buttonSearchC.Text = "Знайти";
             this.buttonSearchC.UseVisualStyleBackColor = true;
@@ -177,9 +214,10 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(47, 34);
+            this.label31.Location = new System.Drawing.Point(35, 28);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(107, 17);
+            this.label31.Size = new System.Drawing.Size(87, 13);
             this.label31.TabIndex = 92;
             this.label31.Text = "Ім\'я / прізвище:";
             // 
@@ -188,27 +226,28 @@
             this.comboBox25.FormattingEnabled = true;
             this.comboBox25.Items.AddRange(new object[] {
             "100"});
-            this.comboBox25.Location = new System.Drawing.Point(517, 95);
-            this.comboBox25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox25.Location = new System.Drawing.Point(388, 77);
+            this.comboBox25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox25.Name = "comboBox25";
-            this.comboBox25.Size = new System.Drawing.Size(63, 24);
+            this.comboBox25.Size = new System.Drawing.Size(48, 21);
             this.comboBox25.TabIndex = 91;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(496, 98);
+            this.label32.Location = new System.Drawing.Point(372, 80);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(13, 17);
+            this.label32.Size = new System.Drawing.Size(10, 13);
             this.label32.TabIndex = 90;
             this.label32.Text = "-";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(163, 33);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox4.Location = new System.Drawing.Point(122, 27);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(153, 22);
+            this.textBox4.Size = new System.Drawing.Size(116, 20);
             this.textBox4.TabIndex = 71;
             // 
             // comboBox26
@@ -216,18 +255,19 @@
             this.comboBox26.FormattingEnabled = true;
             this.comboBox26.Items.AddRange(new object[] {
             "100"});
-            this.comboBox26.Location = new System.Drawing.Point(425, 95);
-            this.comboBox26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox26.Location = new System.Drawing.Point(319, 77);
+            this.comboBox26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox26.Name = "comboBox26";
-            this.comboBox26.Size = new System.Drawing.Size(63, 24);
+            this.comboBox26.Size = new System.Drawing.Size(48, 21);
             this.comboBox26.TabIndex = 89;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(355, 98);
+            this.label34.Location = new System.Drawing.Point(266, 80);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(61, 17);
+            this.label34.Size = new System.Drawing.Size(48, 13);
             this.label34.TabIndex = 88;
             this.label34.Text = "Клас St:";
             // 
@@ -236,10 +276,10 @@
             this.comboBox27.FormattingEnabled = true;
             this.comboBox27.Items.AddRange(new object[] {
             "100"});
-            this.comboBox27.Location = new System.Drawing.Point(163, 64);
-            this.comboBox27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox27.Location = new System.Drawing.Point(122, 52);
+            this.comboBox27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox27.Name = "comboBox27";
-            this.comboBox27.Size = new System.Drawing.Size(63, 24);
+            this.comboBox27.Size = new System.Drawing.Size(48, 21);
             this.comboBox27.TabIndex = 73;
             // 
             // comboBox28
@@ -247,27 +287,29 @@
             this.comboBox28.FormattingEnabled = true;
             this.comboBox28.Items.AddRange(new object[] {
             "100"});
-            this.comboBox28.Location = new System.Drawing.Point(517, 63);
-            this.comboBox28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox28.Location = new System.Drawing.Point(388, 51);
+            this.comboBox28.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox28.Name = "comboBox28";
-            this.comboBox28.Size = new System.Drawing.Size(63, 24);
+            this.comboBox28.Size = new System.Drawing.Size(48, 21);
             this.comboBox28.TabIndex = 87;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(233, 66);
+            this.label35.Location = new System.Drawing.Point(175, 54);
+            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(13, 17);
+            this.label35.Size = new System.Drawing.Size(10, 13);
             this.label35.TabIndex = 74;
             this.label35.Text = "-";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(496, 66);
+            this.label36.Location = new System.Drawing.Point(372, 54);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(13, 17);
+            this.label36.Size = new System.Drawing.Size(10, 13);
             this.label36.TabIndex = 86;
             this.label36.Text = "-";
             // 
@@ -276,10 +318,10 @@
             this.comboBox29.FormattingEnabled = true;
             this.comboBox29.Items.AddRange(new object[] {
             "100"});
-            this.comboBox29.Location = new System.Drawing.Point(253, 64);
-            this.comboBox29.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox29.Location = new System.Drawing.Point(190, 52);
+            this.comboBox29.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox29.Name = "comboBox29";
-            this.comboBox29.Size = new System.Drawing.Size(63, 24);
+            this.comboBox29.Size = new System.Drawing.Size(48, 21);
             this.comboBox29.TabIndex = 75;
             // 
             // comboBox30
@@ -287,37 +329,39 @@
             this.comboBox30.FormattingEnabled = true;
             this.comboBox30.Items.AddRange(new object[] {
             "100"});
-            this.comboBox30.Location = new System.Drawing.Point(425, 63);
-            this.comboBox30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox30.Location = new System.Drawing.Point(319, 51);
+            this.comboBox30.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox30.Name = "comboBox30";
-            this.comboBox30.Size = new System.Drawing.Size(63, 24);
+            this.comboBox30.Size = new System.Drawing.Size(48, 21);
             this.comboBox30.TabIndex = 85;
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(29, 68);
+            this.label37.Location = new System.Drawing.Point(22, 55);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(124, 17);
+            this.label37.Size = new System.Drawing.Size(96, 13);
             this.label37.TabIndex = 76;
             this.label37.Text = "Рік народженння:";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(347, 66);
+            this.label38.Location = new System.Drawing.Point(260, 54);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(68, 17);
+            this.label38.Size = new System.Drawing.Size(53, 13);
             this.label38.TabIndex = 84;
             this.label38.Text = "Клас Lat:";
             // 
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(472, 34);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox7.Location = new System.Drawing.Point(354, 28);
+            this.checkBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(43, 21);
+            this.checkBox7.Size = new System.Drawing.Size(37, 17);
             this.checkBox7.TabIndex = 82;
             this.checkBox7.Text = "Ж";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -325,10 +369,10 @@
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(427, 34);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox8.Location = new System.Drawing.Point(320, 28);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(40, 21);
+            this.checkBox8.Size = new System.Drawing.Size(34, 17);
             this.checkBox8.TabIndex = 81;
             this.checkBox8.Text = "Ч";
             this.checkBox8.UseVisualStyleBackColor = true;
@@ -336,38 +380,39 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(365, 34);
+            this.label40.Location = new System.Drawing.Point(274, 28);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(50, 17);
+            this.label40.Size = new System.Drawing.Size(39, 13);
             this.label40.TabIndex = 80;
             this.label40.Text = "Стать:";
             // 
             // buttonResetC
             // 
-            this.buttonResetC.Location = new System.Drawing.Point(659, 126);
-            this.buttonResetC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonResetC.Location = new System.Drawing.Point(494, 102);
+            this.buttonResetC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonResetC.Name = "buttonResetC";
-            this.buttonResetC.Size = new System.Drawing.Size(109, 52);
+            this.buttonResetC.Size = new System.Drawing.Size(82, 42);
             this.buttonResetC.TabIndex = 82;
             this.buttonResetC.Text = "Скинути зміни";
             this.buttonResetC.UseVisualStyleBackColor = true;
             // 
             // buttonDeleteC
             // 
-            this.buttonDeleteC.Location = new System.Drawing.Point(687, 66);
-            this.buttonDeleteC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDeleteC.Location = new System.Drawing.Point(515, 54);
+            this.buttonDeleteC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDeleteC.Name = "buttonDeleteC";
-            this.buttonDeleteC.Size = new System.Drawing.Size(169, 53);
+            this.buttonDeleteC.Size = new System.Drawing.Size(127, 43);
             this.buttonDeleteC.TabIndex = 84;
             this.buttonDeleteC.Text = "Видалити змагання";
             this.buttonDeleteC.UseVisualStyleBackColor = true;
             // 
             // buttonSaveC
             // 
-            this.buttonSaveC.Location = new System.Drawing.Point(772, 126);
-            this.buttonSaveC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSaveC.Location = new System.Drawing.Point(579, 102);
+            this.buttonSaveC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSaveC.Name = "buttonSaveC";
-            this.buttonSaveC.Size = new System.Drawing.Size(117, 52);
+            this.buttonSaveC.Size = new System.Drawing.Size(88, 42);
             this.buttonSaveC.TabIndex = 81;
             this.buttonSaveC.Text = "Зберегти зміни";
             this.buttonSaveC.UseVisualStyleBackColor = true;
@@ -375,6 +420,7 @@
             // dataGridViewT
             // 
             this.dataGridViewT.AllowUserToResizeRows = false;
+            this.dataGridViewT.AutoGenerateColumns = false;
             this.dataGridViewT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridViewT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -385,12 +431,17 @@
             this.Trainer_Sex,
             this.Trainer_Year,
             this.Trainer_Lat,
-            this.Trainer_St});
-            this.dataGridViewT.Location = new System.Drawing.Point(27, 226);
-            this.dataGridViewT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Trainer_St,
+            this.iDDataGridViewTextBoxColumn2,
+            this.nameDataGridViewTextBoxColumn1,
+            this.adressDataGridViewTextBoxColumn1,
+            this.dateDataGridViewTextBoxColumn});
+            this.dataGridViewT.DataSource = this.cOMPETITIONBindingSource;
+            this.dataGridViewT.Location = new System.Drawing.Point(20, 184);
+            this.dataGridViewT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewT.Name = "dataGridViewT";
             this.dataGridViewT.RowTemplate.Height = 24;
-            this.dataGridViewT.Size = new System.Drawing.Size(864, 340);
+            this.dataGridViewT.Size = new System.Drawing.Size(648, 276);
             this.dataGridViewT.TabIndex = 80;
             // 
             // Trainer_Sex_V
@@ -398,14 +449,14 @@
             this.Trainer_Sex_V.HeaderText = "Стать";
             this.Trainer_Sex_V.Name = "Trainer_Sex_V";
             this.Trainer_Sex_V.ReadOnly = true;
-            this.Trainer_Sex_V.Width = 75;
+            this.Trainer_Sex_V.Width = 61;
             // 
             // Trainer_Year_v
             // 
             this.Trainer_Year_v.HeaderText = "Рік нар.";
             this.Trainer_Year_v.Name = "Trainer_Year_v";
             this.Trainer_Year_v.ReadOnly = true;
-            this.Trainer_Year_v.Width = 88;
+            this.Trainer_Year_v.Width = 71;
             // 
             // Trainer_Lat_V
             // 
@@ -413,14 +464,14 @@
             this.Trainer_Lat_V.HeaderText = "Клас Lat";
             this.Trainer_Lat_V.Name = "Trainer_Lat_V";
             this.Trainer_Lat_V.ReadOnly = true;
-            this.Trainer_Lat_V.Width = 93;
+            this.Trainer_Lat_V.Width = 75;
             // 
             // Trainer_St_V
             // 
             this.Trainer_St_V.HeaderText = "Клас St";
             this.Trainer_St_V.Name = "Trainer_St_V";
             this.Trainer_St_V.ReadOnly = true;
-            this.Trainer_St_V.Width = 86;
+            this.Trainer_St_V.Width = 70;
             // 
             // Trainer_Sex
             // 
@@ -464,10 +515,10 @@
             this.tabPageClubs.Controls.Add(this.buttonDeleteS);
             this.tabPageClubs.Controls.Add(this.buttonSaveS);
             this.tabPageClubs.Controls.Add(this.dataGridViewS);
-            this.tabPageClubs.Location = new System.Drawing.Point(4, 25);
-            this.tabPageClubs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageClubs.Location = new System.Drawing.Point(4, 22);
+            this.tabPageClubs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageClubs.Name = "tabPageClubs";
-            this.tabPageClubs.Size = new System.Drawing.Size(920, 594);
+            this.tabPageClubs.Size = new System.Drawing.Size(688, 480);
             this.tabPageClubs.TabIndex = 2;
             this.tabPageClubs.Text = "Клуби";
             this.tabPageClubs.UseVisualStyleBackColor = true;
@@ -482,21 +533,31 @@
             this.groupBox3.Controls.Add(this.comboBox19);
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.comboBox21);
-            this.groupBox3.Location = new System.Drawing.Point(27, 18);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Location = new System.Drawing.Point(20, 15);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(613, 183);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(460, 149);
             this.groupBox3.TabIndex = 83;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Фільтр";
             // 
+            // buttonResetFilterS
+            // 
+            this.buttonResetFilterS.Location = new System.Drawing.Point(177, 109);
+            this.buttonResetFilterS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonResetFilterS.Name = "buttonResetFilterS";
+            this.buttonResetFilterS.Size = new System.Drawing.Size(116, 21);
+            this.buttonResetFilterS.TabIndex = 94;
+            this.buttonResetFilterS.Text = "Скинути фільтр";
+            this.buttonResetFilterS.UseVisualStyleBackColor = true;
+            // 
             // buttonSearchS
             // 
-            this.buttonSearchS.Location = new System.Drawing.Point(425, 134);
-            this.buttonSearchS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSearchS.Location = new System.Drawing.Point(319, 109);
+            this.buttonSearchS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSearchS.Name = "buttonSearchS";
-            this.buttonSearchS.Size = new System.Drawing.Size(155, 26);
+            this.buttonSearchS.Size = new System.Drawing.Size(116, 21);
             this.buttonSearchS.TabIndex = 76;
             this.buttonSearchS.Text = "Знайти";
             this.buttonSearchS.UseVisualStyleBackColor = true;
@@ -504,26 +565,28 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(56, 34);
+            this.label21.Location = new System.Drawing.Point(42, 28);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(94, 17);
+            this.label21.Size = new System.Drawing.Size(74, 13);
             this.label21.TabIndex = 92;
             this.label21.Text = "Назва клуба:";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(163, 33);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Location = new System.Drawing.Point(122, 27);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(153, 22);
+            this.textBox3.Size = new System.Drawing.Size(116, 20);
             this.textBox3.TabIndex = 71;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(20, 66);
+            this.label23.Location = new System.Drawing.Point(15, 54);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(131, 17);
+            this.label23.Size = new System.Drawing.Size(102, 13);
             this.label23.TabIndex = 72;
             this.label23.Text = "Кількість танцорів:";
             // 
@@ -532,18 +595,19 @@
             this.comboBox19.FormattingEnabled = true;
             this.comboBox19.Items.AddRange(new object[] {
             "100"});
-            this.comboBox19.Location = new System.Drawing.Point(163, 64);
-            this.comboBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox19.Location = new System.Drawing.Point(122, 52);
+            this.comboBox19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox19.Name = "comboBox19";
-            this.comboBox19.Size = new System.Drawing.Size(63, 24);
+            this.comboBox19.Size = new System.Drawing.Size(48, 21);
             this.comboBox19.TabIndex = 73;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(233, 66);
+            this.label25.Location = new System.Drawing.Point(175, 54);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(13, 17);
+            this.label25.Size = new System.Drawing.Size(10, 13);
             this.label25.TabIndex = 74;
             this.label25.Text = "-";
             // 
@@ -552,38 +616,38 @@
             this.comboBox21.FormattingEnabled = true;
             this.comboBox21.Items.AddRange(new object[] {
             "100"});
-            this.comboBox21.Location = new System.Drawing.Point(253, 64);
-            this.comboBox21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox21.Location = new System.Drawing.Point(190, 52);
+            this.comboBox21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox21.Name = "comboBox21";
-            this.comboBox21.Size = new System.Drawing.Size(63, 24);
+            this.comboBox21.Size = new System.Drawing.Size(48, 21);
             this.comboBox21.TabIndex = 75;
             // 
             // buttonResetS
             // 
-            this.buttonResetS.Location = new System.Drawing.Point(659, 126);
-            this.buttonResetS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonResetS.Location = new System.Drawing.Point(494, 102);
+            this.buttonResetS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonResetS.Name = "buttonResetS";
-            this.buttonResetS.Size = new System.Drawing.Size(109, 52);
+            this.buttonResetS.Size = new System.Drawing.Size(82, 42);
             this.buttonResetS.TabIndex = 82;
             this.buttonResetS.Text = "Скинути зміни";
             this.buttonResetS.UseVisualStyleBackColor = true;
             // 
             // buttonDeleteS
             // 
-            this.buttonDeleteS.Location = new System.Drawing.Point(687, 66);
-            this.buttonDeleteS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDeleteS.Location = new System.Drawing.Point(515, 54);
+            this.buttonDeleteS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDeleteS.Name = "buttonDeleteS";
-            this.buttonDeleteS.Size = new System.Drawing.Size(169, 53);
+            this.buttonDeleteS.Size = new System.Drawing.Size(127, 43);
             this.buttonDeleteS.TabIndex = 84;
             this.buttonDeleteS.Text = "Видалити клуб";
             this.buttonDeleteS.UseVisualStyleBackColor = true;
             // 
             // buttonSaveS
             // 
-            this.buttonSaveS.Location = new System.Drawing.Point(772, 126);
-            this.buttonSaveS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSaveS.Location = new System.Drawing.Point(579, 102);
+            this.buttonSaveS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSaveS.Name = "buttonSaveS";
-            this.buttonSaveS.Size = new System.Drawing.Size(117, 52);
+            this.buttonSaveS.Size = new System.Drawing.Size(88, 42);
             this.buttonSaveS.TabIndex = 81;
             this.buttonSaveS.Text = "Зберегти зміни";
             this.buttonSaveS.UseVisualStyleBackColor = true;
@@ -591,13 +655,20 @@
             // dataGridViewS
             // 
             this.dataGridViewS.AllowUserToResizeRows = false;
+            this.dataGridViewS.AutoGenerateColumns = false;
             this.dataGridViewS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridViewS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewS.Location = new System.Drawing.Point(27, 226);
-            this.dataGridViewS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn1,
+            this.nameDataGridViewTextBoxColumn,
+            this.adressDataGridViewTextBoxColumn,
+            this.dANCERsDataGridViewTextBoxColumn});
+            this.dataGridViewS.DataSource = this.cLUBBindingSource;
+            this.dataGridViewS.Location = new System.Drawing.Point(20, 184);
+            this.dataGridViewS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewS.Name = "dataGridViewS";
             this.dataGridViewS.RowTemplate.Height = 24;
-            this.dataGridViewS.Size = new System.Drawing.Size(864, 340);
+            this.dataGridViewS.Size = new System.Drawing.Size(648, 276);
             this.dataGridViewS.TabIndex = 80;
             // 
             // tabPageD
@@ -610,11 +681,11 @@
             this.tabPageD.Controls.Add(this.buttonDeleteD);
             this.tabPageD.Controls.Add(this.buttonSaveD);
             this.tabPageD.Controls.Add(this.dataGridViewD);
-            this.tabPageD.Location = new System.Drawing.Point(4, 25);
-            this.tabPageD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageD.Location = new System.Drawing.Point(4, 22);
+            this.tabPageD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageD.Name = "tabPageD";
-            this.tabPageD.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageD.Size = new System.Drawing.Size(920, 594);
+            this.tabPageD.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageD.Size = new System.Drawing.Size(688, 480);
             this.tabPageD.TabIndex = 0;
             this.tabPageD.Text = "Танцори";
             // 
@@ -623,9 +694,10 @@
             this.ErrorLabelD.AutoSize = true;
             this.ErrorLabelD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ErrorLabelD.ForeColor = System.Drawing.Color.DarkRed;
-            this.ErrorLabelD.Location = new System.Drawing.Point(24, 571);
+            this.ErrorLabelD.Location = new System.Drawing.Point(18, 464);
+            this.ErrorLabelD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ErrorLabelD.Name = "ErrorLabelD";
-            this.ErrorLabelD.Size = new System.Drawing.Size(0, 17);
+            this.ErrorLabelD.Size = new System.Drawing.Size(0, 13);
             this.ErrorLabelD.TabIndex = 2;
             // 
             // groupBox1
@@ -653,21 +725,31 @@
             this.groupBox1.Controls.Add(this.comboBoxMaxYearD);
             this.groupBox1.Controls.Add(this.checkBoxMaleD);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Location = new System.Drawing.Point(27, 18);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(20, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(613, 183);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(460, 149);
             this.groupBox1.TabIndex = 73;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Фільтр";
             // 
+            // buttonResetFilterD
+            // 
+            this.buttonResetFilterD.Location = new System.Drawing.Point(186, 109);
+            this.buttonResetFilterD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonResetFilterD.Name = "buttonResetFilterD";
+            this.buttonResetFilterD.Size = new System.Drawing.Size(116, 21);
+            this.buttonResetFilterD.TabIndex = 93;
+            this.buttonResetFilterD.Text = "Скинути фільтр";
+            this.buttonResetFilterD.UseVisualStyleBackColor = true;
+            // 
             // buttonSearchD
             // 
-            this.buttonSearchD.Location = new System.Drawing.Point(425, 134);
-            this.buttonSearchD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSearchD.Location = new System.Drawing.Point(319, 109);
+            this.buttonSearchD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSearchD.Name = "buttonSearchD";
-            this.buttonSearchD.Size = new System.Drawing.Size(155, 26);
+            this.buttonSearchD.Size = new System.Drawing.Size(116, 21);
             this.buttonSearchD.TabIndex = 75;
             this.buttonSearchD.Text = "Знайти";
             this.buttonSearchD.UseVisualStyleBackColor = true;
@@ -675,9 +757,10 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(47, 34);
+            this.label18.Location = new System.Drawing.Point(35, 28);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(107, 17);
+            this.label18.Size = new System.Drawing.Size(87, 13);
             this.label18.TabIndex = 92;
             this.label18.Text = "Ім\'я / прізвище:";
             // 
@@ -692,27 +775,28 @@
             "B",
             "A",
             "S"});
-            this.comboBoxMaxClassStD.Location = new System.Drawing.Point(517, 95);
-            this.comboBoxMaxClassStD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMaxClassStD.Location = new System.Drawing.Point(388, 77);
+            this.comboBoxMaxClassStD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxMaxClassStD.Name = "comboBoxMaxClassStD";
-            this.comboBoxMaxClassStD.Size = new System.Drawing.Size(63, 24);
+            this.comboBoxMaxClassStD.Size = new System.Drawing.Size(48, 21);
             this.comboBoxMaxClassStD.TabIndex = 91;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(496, 98);
+            this.label16.Location = new System.Drawing.Point(372, 80);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(13, 17);
+            this.label16.Size = new System.Drawing.Size(10, 13);
             this.label16.TabIndex = 90;
             this.label16.Text = "-";
             // 
             // textBoxNameD
             // 
-            this.textBoxNameD.Location = new System.Drawing.Point(163, 33);
-            this.textBoxNameD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxNameD.Location = new System.Drawing.Point(122, 27);
+            this.textBoxNameD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxNameD.Name = "textBoxNameD";
-            this.textBoxNameD.Size = new System.Drawing.Size(153, 22);
+            this.textBoxNameD.Size = new System.Drawing.Size(116, 20);
             this.textBoxNameD.TabIndex = 71;
             // 
             // comboBoxMinClassStD
@@ -726,37 +810,39 @@
             "B",
             "A",
             "S"});
-            this.comboBoxMinClassStD.Location = new System.Drawing.Point(425, 95);
-            this.comboBoxMinClassStD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMinClassStD.Location = new System.Drawing.Point(319, 77);
+            this.comboBoxMinClassStD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxMinClassStD.Name = "comboBoxMinClassStD";
-            this.comboBoxMinClassStD.Size = new System.Drawing.Size(63, 24);
+            this.comboBoxMinClassStD.Size = new System.Drawing.Size(48, 21);
             this.comboBoxMinClassStD.TabIndex = 89;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(107, 66);
+            this.label1.Location = new System.Drawing.Point(80, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 72;
             this.label1.Text = "Зріст:";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(355, 98);
+            this.label17.Location = new System.Drawing.Point(266, 80);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 17);
+            this.label17.Size = new System.Drawing.Size(48, 13);
             this.label17.TabIndex = 88;
             this.label17.Text = "Клас St:";
             // 
             // comboBoxMinHeightD
             // 
             this.comboBoxMinHeightD.FormattingEnabled = true;
-            this.comboBoxMinHeightD.Location = new System.Drawing.Point(163, 64);
-            this.comboBoxMinHeightD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMinHeightD.Location = new System.Drawing.Point(122, 52);
+            this.comboBoxMinHeightD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxMinHeightD.Name = "comboBoxMinHeightD";
-            this.comboBoxMinHeightD.Size = new System.Drawing.Size(63, 24);
+            this.comboBoxMinHeightD.Size = new System.Drawing.Size(48, 21);
             this.comboBoxMinHeightD.TabIndex = 73;
             // 
             // comboBoxMaxClassLatD
@@ -770,37 +856,39 @@
             "B",
             "A",
             "S"});
-            this.comboBoxMaxClassLatD.Location = new System.Drawing.Point(517, 63);
-            this.comboBoxMaxClassLatD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMaxClassLatD.Location = new System.Drawing.Point(388, 51);
+            this.comboBoxMaxClassLatD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxMaxClassLatD.Name = "comboBoxMaxClassLatD";
-            this.comboBoxMaxClassLatD.Size = new System.Drawing.Size(63, 24);
+            this.comboBoxMaxClassLatD.Size = new System.Drawing.Size(48, 21);
             this.comboBoxMaxClassLatD.TabIndex = 87;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(233, 66);
+            this.label3.Location = new System.Drawing.Point(175, 54);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 17);
+            this.label3.Size = new System.Drawing.Size(10, 13);
             this.label3.TabIndex = 74;
             this.label3.Text = "-";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(496, 66);
+            this.label12.Location = new System.Drawing.Point(372, 54);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(13, 17);
+            this.label12.Size = new System.Drawing.Size(10, 13);
             this.label12.TabIndex = 86;
             this.label12.Text = "-";
             // 
             // comboBoxMaxHeightD
             // 
             this.comboBoxMaxHeightD.FormattingEnabled = true;
-            this.comboBoxMaxHeightD.Location = new System.Drawing.Point(253, 64);
-            this.comboBoxMaxHeightD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMaxHeightD.Location = new System.Drawing.Point(190, 52);
+            this.comboBoxMaxHeightD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxMaxHeightD.Name = "comboBoxMaxHeightD";
-            this.comboBoxMaxHeightD.Size = new System.Drawing.Size(63, 24);
+            this.comboBoxMaxHeightD.Size = new System.Drawing.Size(48, 21);
             this.comboBoxMaxHeightD.TabIndex = 75;
             // 
             // comboBoxMinClassLatD
@@ -814,55 +902,58 @@
             "B",
             "A",
             "S"});
-            this.comboBoxMinClassLatD.Location = new System.Drawing.Point(425, 63);
-            this.comboBoxMinClassLatD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMinClassLatD.Location = new System.Drawing.Point(319, 51);
+            this.comboBoxMinClassLatD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxMinClassLatD.Name = "comboBoxMinClassLatD";
-            this.comboBoxMinClassLatD.Size = new System.Drawing.Size(63, 24);
+            this.comboBoxMinClassLatD.Size = new System.Drawing.Size(48, 21);
             this.comboBoxMinClassLatD.TabIndex = 85;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(29, 98);
+            this.label13.Location = new System.Drawing.Point(22, 80);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(124, 17);
+            this.label13.Size = new System.Drawing.Size(96, 13);
             this.label13.TabIndex = 76;
             this.label13.Text = "Рік народженння:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(347, 66);
+            this.label15.Location = new System.Drawing.Point(260, 54);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(68, 17);
+            this.label15.Size = new System.Drawing.Size(53, 13);
             this.label15.TabIndex = 84;
             this.label15.Text = "Клас Lat:";
             // 
             // comboBoxMinYearD
             // 
             this.comboBoxMinYearD.FormattingEnabled = true;
-            this.comboBoxMinYearD.Location = new System.Drawing.Point(163, 95);
-            this.comboBoxMinYearD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMinYearD.Location = new System.Drawing.Point(122, 77);
+            this.comboBoxMinYearD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxMinYearD.Name = "comboBoxMinYearD";
-            this.comboBoxMinYearD.Size = new System.Drawing.Size(63, 24);
+            this.comboBoxMinYearD.Size = new System.Drawing.Size(48, 21);
             this.comboBoxMinYearD.TabIndex = 77;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(233, 98);
+            this.label11.Location = new System.Drawing.Point(175, 80);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(13, 17);
+            this.label11.Size = new System.Drawing.Size(10, 13);
             this.label11.TabIndex = 78;
             this.label11.Text = "-";
             // 
             // checkBoxFemaleD
             // 
             this.checkBoxFemaleD.AutoSize = true;
-            this.checkBoxFemaleD.Location = new System.Drawing.Point(472, 34);
-            this.checkBoxFemaleD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxFemaleD.Location = new System.Drawing.Point(354, 28);
+            this.checkBoxFemaleD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxFemaleD.Name = "checkBoxFemaleD";
-            this.checkBoxFemaleD.Size = new System.Drawing.Size(43, 21);
+            this.checkBoxFemaleD.Size = new System.Drawing.Size(37, 17);
             this.checkBoxFemaleD.TabIndex = 82;
             this.checkBoxFemaleD.Text = "Ж";
             this.checkBoxFemaleD.UseVisualStyleBackColor = true;
@@ -870,19 +961,19 @@
             // comboBoxMaxYearD
             // 
             this.comboBoxMaxYearD.FormattingEnabled = true;
-            this.comboBoxMaxYearD.Location = new System.Drawing.Point(253, 95);
-            this.comboBoxMaxYearD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMaxYearD.Location = new System.Drawing.Point(190, 77);
+            this.comboBoxMaxYearD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxMaxYearD.Name = "comboBoxMaxYearD";
-            this.comboBoxMaxYearD.Size = new System.Drawing.Size(63, 24);
+            this.comboBoxMaxYearD.Size = new System.Drawing.Size(48, 21);
             this.comboBoxMaxYearD.TabIndex = 79;
             // 
             // checkBoxMaleD
             // 
             this.checkBoxMaleD.AutoSize = true;
-            this.checkBoxMaleD.Location = new System.Drawing.Point(427, 34);
-            this.checkBoxMaleD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxMaleD.Location = new System.Drawing.Point(320, 28);
+            this.checkBoxMaleD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxMaleD.Name = "checkBoxMaleD";
-            this.checkBoxMaleD.Size = new System.Drawing.Size(40, 21);
+            this.checkBoxMaleD.Size = new System.Drawing.Size(34, 17);
             this.checkBoxMaleD.TabIndex = 81;
             this.checkBoxMaleD.Text = "Ч";
             this.checkBoxMaleD.UseVisualStyleBackColor = true;
@@ -890,38 +981,39 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(365, 34);
+            this.label14.Location = new System.Drawing.Point(274, 28);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 17);
+            this.label14.Size = new System.Drawing.Size(39, 13);
             this.label14.TabIndex = 80;
             this.label14.Text = "Стать:";
             // 
             // buttonResetD
             // 
-            this.buttonResetD.Location = new System.Drawing.Point(659, 126);
-            this.buttonResetD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonResetD.Location = new System.Drawing.Point(494, 102);
+            this.buttonResetD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonResetD.Name = "buttonResetD";
-            this.buttonResetD.Size = new System.Drawing.Size(109, 52);
+            this.buttonResetD.Size = new System.Drawing.Size(82, 42);
             this.buttonResetD.TabIndex = 72;
             this.buttonResetD.Text = "Скинути зміни";
             this.buttonResetD.UseVisualStyleBackColor = true;
             // 
             // buttonDeleteD
             // 
-            this.buttonDeleteD.Location = new System.Drawing.Point(687, 66);
-            this.buttonDeleteD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDeleteD.Location = new System.Drawing.Point(515, 54);
+            this.buttonDeleteD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDeleteD.Name = "buttonDeleteD";
-            this.buttonDeleteD.Size = new System.Drawing.Size(169, 53);
+            this.buttonDeleteD.Size = new System.Drawing.Size(127, 43);
             this.buttonDeleteD.TabIndex = 74;
             this.buttonDeleteD.Text = "Видалити танцора";
             this.buttonDeleteD.UseVisualStyleBackColor = true;
             // 
             // buttonSaveD
             // 
-            this.buttonSaveD.Location = new System.Drawing.Point(772, 126);
-            this.buttonSaveD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSaveD.Location = new System.Drawing.Point(579, 102);
+            this.buttonSaveD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSaveD.Name = "buttonSaveD";
-            this.buttonSaveD.Size = new System.Drawing.Size(117, 52);
+            this.buttonSaveD.Size = new System.Drawing.Size(88, 42);
             this.buttonSaveD.TabIndex = 71;
             this.buttonSaveD.Text = "Зберегти зміни";
             this.buttonSaveD.UseVisualStyleBackColor = true;
@@ -929,15 +1021,29 @@
             // dataGridViewD
             // 
             this.dataGridViewD.AllowUserToResizeRows = false;
+            this.dataGridViewD.AutoGenerateColumns = false;
             this.dataGridViewD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridViewD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Клуб});
-            this.dataGridViewD.Location = new System.Drawing.Point(27, 226);
-            this.dataGridViewD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Клуб,
+            this.iDDataGridViewTextBoxColumn,
+            this.cLUBIDDataGridViewTextBoxColumn,
+            this.fullnameDataGridViewTextBoxColumn,
+            this.sexDataGridViewTextBoxColumn,
+            this.heightDataGridViewTextBoxColumn,
+            this.classLatDataGridViewTextBoxColumn,
+            this.classStDataGridViewTextBoxColumn,
+            this.yearofbirthDataGridViewTextBoxColumn,
+            this.cLASSDataGridViewTextBoxColumn,
+            this.cLASS1DataGridViewTextBoxColumn,
+            this.cLUBDataGridViewTextBoxColumn,
+            this.sEX1DataGridViewTextBoxColumn});
+            this.dataGridViewD.DataSource = this.dANCERBindingSource;
+            this.dataGridViewD.Location = new System.Drawing.Point(20, 184);
+            this.dataGridViewD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewD.Name = "dataGridViewD";
             this.dataGridViewD.RowTemplate.Height = 24;
-            this.dataGridViewD.Size = new System.Drawing.Size(864, 340);
+            this.dataGridViewD.Size = new System.Drawing.Size(648, 276);
             this.dataGridViewD.TabIndex = 3;
             // 
             // Клуб
@@ -954,51 +1060,172 @@
             this.tabControl1.Controls.Add(this.tabPageD);
             this.tabControl1.Controls.Add(this.tabPageClubs);
             this.tabControl1.Controls.Add(this.tabPageCompetitions);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Location = new System.Drawing.Point(9, 10);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(928, 623);
+            this.tabControl1.Size = new System.Drawing.Size(696, 506);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 3;
             // 
-            // buttonResetFilterD
+            // dANCERBindingSource
             // 
-            this.buttonResetFilterD.Location = new System.Drawing.Point(248, 134);
-            this.buttonResetFilterD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonResetFilterD.Name = "buttonResetFilterD";
-            this.buttonResetFilterD.Size = new System.Drawing.Size(155, 26);
-            this.buttonResetFilterD.TabIndex = 93;
-            this.buttonResetFilterD.Text = "Скинути фільтр";
-            this.buttonResetFilterD.UseVisualStyleBackColor = true;
+            this.dANCERBindingSource.DataSource = typeof(DanceLibraryEF.DANCER);
             // 
-            // buttonResetFilterS
+            // iDDataGridViewTextBoxColumn
             // 
-            this.buttonResetFilterS.Location = new System.Drawing.Point(236, 134);
-            this.buttonResetFilterS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonResetFilterS.Name = "buttonResetFilterS";
-            this.buttonResetFilterS.Size = new System.Drawing.Size(155, 26);
-            this.buttonResetFilterS.TabIndex = 94;
-            this.buttonResetFilterS.Text = "Скинути фільтр";
-            this.buttonResetFilterS.UseVisualStyleBackColor = true;
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Width = 43;
             // 
-            // buttonResetFilterC
+            // cLUBIDDataGridViewTextBoxColumn
             // 
-            this.buttonResetFilterC.Location = new System.Drawing.Point(236, 134);
-            this.buttonResetFilterC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonResetFilterC.Name = "buttonResetFilterC";
-            this.buttonResetFilterC.Size = new System.Drawing.Size(155, 26);
-            this.buttonResetFilterC.TabIndex = 94;
-            this.buttonResetFilterC.Text = "Скинути фільтр";
-            this.buttonResetFilterC.UseVisualStyleBackColor = true;
+            this.cLUBIDDataGridViewTextBoxColumn.DataPropertyName = "CLUB_ID";
+            this.cLUBIDDataGridViewTextBoxColumn.HeaderText = "CLUB_ID";
+            this.cLUBIDDataGridViewTextBoxColumn.Name = "cLUBIDDataGridViewTextBoxColumn";
+            this.cLUBIDDataGridViewTextBoxColumn.Width = 77;
+            // 
+            // fullnameDataGridViewTextBoxColumn
+            // 
+            this.fullnameDataGridViewTextBoxColumn.DataPropertyName = "Fullname";
+            this.fullnameDataGridViewTextBoxColumn.HeaderText = "Fullname";
+            this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
+            this.fullnameDataGridViewTextBoxColumn.Width = 74;
+            // 
+            // sexDataGridViewTextBoxColumn
+            // 
+            this.sexDataGridViewTextBoxColumn.DataPropertyName = "Sex";
+            this.sexDataGridViewTextBoxColumn.HeaderText = "Sex";
+            this.sexDataGridViewTextBoxColumn.Name = "sexDataGridViewTextBoxColumn";
+            this.sexDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // heightDataGridViewTextBoxColumn
+            // 
+            this.heightDataGridViewTextBoxColumn.DataPropertyName = "Height";
+            this.heightDataGridViewTextBoxColumn.HeaderText = "Height";
+            this.heightDataGridViewTextBoxColumn.Name = "heightDataGridViewTextBoxColumn";
+            this.heightDataGridViewTextBoxColumn.Width = 63;
+            // 
+            // classLatDataGridViewTextBoxColumn
+            // 
+            this.classLatDataGridViewTextBoxColumn.DataPropertyName = "Class_Lat";
+            this.classLatDataGridViewTextBoxColumn.HeaderText = "Class_Lat";
+            this.classLatDataGridViewTextBoxColumn.Name = "classLatDataGridViewTextBoxColumn";
+            this.classLatDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // classStDataGridViewTextBoxColumn
+            // 
+            this.classStDataGridViewTextBoxColumn.DataPropertyName = "Class_St";
+            this.classStDataGridViewTextBoxColumn.HeaderText = "Class_St";
+            this.classStDataGridViewTextBoxColumn.Name = "classStDataGridViewTextBoxColumn";
+            this.classStDataGridViewTextBoxColumn.Width = 73;
+            // 
+            // yearofbirthDataGridViewTextBoxColumn
+            // 
+            this.yearofbirthDataGridViewTextBoxColumn.DataPropertyName = "Year_of_birth";
+            this.yearofbirthDataGridViewTextBoxColumn.HeaderText = "Year_of_birth";
+            this.yearofbirthDataGridViewTextBoxColumn.Name = "yearofbirthDataGridViewTextBoxColumn";
+            this.yearofbirthDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // cLASSDataGridViewTextBoxColumn
+            // 
+            this.cLASSDataGridViewTextBoxColumn.DataPropertyName = "CLASS";
+            this.cLASSDataGridViewTextBoxColumn.HeaderText = "CLASS";
+            this.cLASSDataGridViewTextBoxColumn.Name = "cLASSDataGridViewTextBoxColumn";
+            this.cLASSDataGridViewTextBoxColumn.Width = 66;
+            // 
+            // cLASS1DataGridViewTextBoxColumn
+            // 
+            this.cLASS1DataGridViewTextBoxColumn.DataPropertyName = "CLASS1";
+            this.cLASS1DataGridViewTextBoxColumn.HeaderText = "CLASS1";
+            this.cLASS1DataGridViewTextBoxColumn.Name = "cLASS1DataGridViewTextBoxColumn";
+            this.cLASS1DataGridViewTextBoxColumn.Width = 72;
+            // 
+            // cLUBDataGridViewTextBoxColumn
+            // 
+            this.cLUBDataGridViewTextBoxColumn.DataPropertyName = "CLUB";
+            this.cLUBDataGridViewTextBoxColumn.HeaderText = "CLUB";
+            this.cLUBDataGridViewTextBoxColumn.Name = "cLUBDataGridViewTextBoxColumn";
+            this.cLUBDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // sEX1DataGridViewTextBoxColumn
+            // 
+            this.sEX1DataGridViewTextBoxColumn.DataPropertyName = "SEX1";
+            this.sEX1DataGridViewTextBoxColumn.HeaderText = "SEX1";
+            this.sEX1DataGridViewTextBoxColumn.Name = "sEX1DataGridViewTextBoxColumn";
+            this.sEX1DataGridViewTextBoxColumn.Width = 59;
+            // 
+            // cLUBBindingSource
+            // 
+            this.cLUBBindingSource.DataSource = typeof(DanceLibraryEF.CLUB);
+            // 
+            // iDDataGridViewTextBoxColumn1
+            // 
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            this.iDDataGridViewTextBoxColumn1.Width = 43;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // adressDataGridViewTextBoxColumn
+            // 
+            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
+            this.adressDataGridViewTextBoxColumn.HeaderText = "Adress";
+            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
+            this.adressDataGridViewTextBoxColumn.Width = 64;
+            // 
+            // dANCERsDataGridViewTextBoxColumn
+            // 
+            this.dANCERsDataGridViewTextBoxColumn.DataPropertyName = "DANCERs";
+            this.dANCERsDataGridViewTextBoxColumn.HeaderText = "DANCERs";
+            this.dANCERsDataGridViewTextBoxColumn.Name = "dANCERsDataGridViewTextBoxColumn";
+            this.dANCERsDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // cOMPETITIONBindingSource
+            // 
+            this.cOMPETITIONBindingSource.DataSource = typeof(DanceLibraryEF.COMPETITION);
+            // 
+            // iDDataGridViewTextBoxColumn2
+            // 
+            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
+            this.iDDataGridViewTextBoxColumn2.Width = 43;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.Width = 60;
+            // 
+            // adressDataGridViewTextBoxColumn1
+            // 
+            this.adressDataGridViewTextBoxColumn1.DataPropertyName = "Adress";
+            this.adressDataGridViewTextBoxColumn1.HeaderText = "Adress";
+            this.adressDataGridViewTextBoxColumn1.Name = "adressDataGridViewTextBoxColumn1";
+            this.adressDataGridViewTextBoxColumn1.Width = 64;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.Width = 55;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 645);
+            this.ClientSize = new System.Drawing.Size(715, 524);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabPageCompetitions.ResumeLayout(false);
@@ -1015,6 +1242,9 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewD)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dANCERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cLUBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOMPETITIONBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1100,6 +1330,29 @@
         private System.Windows.Forms.Button buttonResetFilterC;
         private System.Windows.Forms.Button buttonResetFilterS;
         private System.Windows.Forms.Button buttonResetFilterD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource cOMPETITIONBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dANCERsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource cLUBBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cLUBIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn heightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn classLatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn classStDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yearofbirthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cLASSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cLASS1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cLUBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sEX1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource dANCERBindingSource;
     }
 }
 
