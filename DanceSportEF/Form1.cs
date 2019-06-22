@@ -44,10 +44,6 @@ namespace DanceSportEF
             {
                 dancers = dancers.Where(d => d.Fullname == textBoxNameD.Text);
             }
-            //if()   height
-            //ujl year of birthday
-
-
         }
     }
 }
