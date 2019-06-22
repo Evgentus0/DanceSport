@@ -33,5 +33,19 @@ namespace DanceSportEF
             base.OnClosing(e);
             ctx.Dispose();
         }
+
+        private void ButtonSearchD_Click(object sender, EventArgs e)
+        {
+            ctx.Dispose();
+            var dancers = from d in ctx.DANCERs select d;
+            if (!string.IsNullOrEmpty(textBoxNameD.Text))
+            {
+                dancers = dancers.Where(d => d.Fullname == textBoxNameD.Text);
+            }
+            //if()   height
+            //ujl year of birthday
+
+
+        }
     }
 }

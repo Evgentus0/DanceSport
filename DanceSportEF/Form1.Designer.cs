@@ -753,6 +753,7 @@
             this.buttonSearchD.TabIndex = 75;
             this.buttonSearchD.Text = "Знайти";
             this.buttonSearchD.UseVisualStyleBackColor = true;
+            this.buttonSearchD.Click += new System.EventHandler(this.ButtonSearchD_Click);
             // 
             // label18
             // 
