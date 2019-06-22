@@ -24,8 +24,14 @@ namespace DanceSportEF
             base.OnLoad(e);
             ctx = new DanceLibraryEF.DanceSportSimplifiedEntities();
             ctx.DANCERs.Load();
-            //
+            this.dANCERBindingSource.DataSource = ctx.DANCERs.Local.ToBindingList();
             
-        } 
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            ctx.Dispose();
+        }
     }
 }
