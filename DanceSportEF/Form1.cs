@@ -44,6 +44,10 @@ namespace DanceSportEF
             {
                 dancers = dancers.Where(d => d.Fullname == textBoxNameD.Text);
             }
+            if (numericUpDownHeightMin.Value <= numericUpDownHeightMax.Value)
+            {
+                dancers = dancers.Where(d => d.Height >= numericUpDownHeightMin.Value && d.Height <= numericUpDownHeightMax.Value);
+            }
         }
     }
 }
